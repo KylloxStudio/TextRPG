@@ -33,6 +33,7 @@ namespace TextRPG
                 if (value <= 0)
                 {
                     Context.Hp = 0;
+                    Death();
                 }
                 else if (value > Context.MaxHp)
                 {

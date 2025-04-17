@@ -88,11 +88,6 @@ namespace TextRPG
             Game.Player.Hp -= GetHpLoss(difficulty);
             Game.Player.Context.Gold += GetClearGold(difficulty);
 
-            if (Game.Player.Context.IsDead)
-            {
-                return;
-            }
-
             Console.WriteLine($"\r\n던전 클리어\r\n축하합니다!!\r\n{difficulty} 던전을 클리어 하였습니다.\r\n");
             Console.WriteLine("[탐험 결과]");
             Console.WriteLine($"체력 {Game.Player.Hp + GetHpLoss(difficulty)} -> {Game.Player.Hp}");
